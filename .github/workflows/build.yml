@@ -28,6 +28,10 @@ jobs:
           os: ubuntu-latest
           devScript: ./dev.sh
 
+        - runtime: linux-riscv64
+          os: ubuntu-latest
+          devScript: ./dev.sh
+
         - runtime: linux-arm
           os: ubuntu-latest
           devScript: ./dev.sh
