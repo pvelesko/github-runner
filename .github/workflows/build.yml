@@ -20,37 +20,37 @@ jobs:
       matrix:
         runtime: [ linux-riscv64 ]
         include:
-        - runtime: linux-x64
-          os: ubuntu-latest
-          devScript: ./dev.sh
+        # - runtime: linux-x64
+        #   os: ubuntu-latest
+        #   devScript: ./dev.sh
 
-        - runtime: linux-arm64
-          os: ubuntu-latest
-          devScript: ./dev.sh
+        # - runtime: linux-arm64
+        #   os: ubuntu-latest
+        #   devScript: ./dev.sh
 
         - runtime: linux-riscv64
           os: ubuntu-latest
           devScript: ./dev.sh
 
-        - runtime: linux-arm
-          os: ubuntu-latest
-          devScript: ./dev.sh
+        # - runtime: linux-arm
+        #   os: ubuntu-latest
+        #   devScript: ./dev.sh
 
-        - runtime: osx-x64
-          os: macOS-latest
-          devScript: ./dev.sh
+        # - runtime: osx-x64
+        #   os: macOS-latest
+        #   devScript: ./dev.sh
 
-        - runtime: osx-arm64
-          os: macOS-latest
-          devScript: ./dev.sh
+        # - runtime: osx-arm64
+        #   os: macOS-latest
+        #   devScript: ./dev.sh
 
-        - runtime: win-x64
-          os: windows-2019
-          devScript: ./dev
+        # - runtime: win-x64
+        #   os: windows-2019
+        #   devScript: ./dev
 
-        - runtime: win-arm64
-          os: windows-latest
-          devScript: ./dev
+        # - runtime: win-arm64
+        #   os: windows-latest
+        #   devScript: ./dev
 
     runs-on: ${{ matrix.os }}
     steps:
