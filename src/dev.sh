@@ -22,7 +22,7 @@ DOWNLOAD_DIR="$SCRIPT_DIR/../_downloads/netcore2x"
 PACKAGE_DIR="$SCRIPT_DIR/../_package"
 PACKAGE_TRIMS_DIR="$SCRIPT_DIR/../_package_trims"
 DOTNETSDK_ROOT="$SCRIPT_DIR/../_dotnetsdk"
-DOTNETSDK_VERSION="8.0.100"
+DOTNETSDK_VERSION="9.0.100"
 DOTNETSDK_INSTALLDIR="$DOTNETSDK_ROOT/$DOTNETSDK_VERSION"
 RUNNER_VERSION=$(cat runnerversion)
 
@@ -56,7 +56,6 @@ elif [[ "$CURRENT_PLATFORM" == 'linux' ]]; then
     RUNTIME_ID="linux-x64"
     if command -v uname > /dev/null; then
         CPU_NAME=$(uname -m)
-        CPU_NAME="riscv64"
         case $CPU_NAME in
             armv7l) RUNTIME_ID="linux-arm";;
             aarch64) RUNTIME_ID="linux-arm64";;
