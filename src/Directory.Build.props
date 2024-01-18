@@ -44,6 +44,9 @@
   <PropertyGroup Condition="'$(BUILD_OS)' == 'Linux' AND '$(PackageRuntime)' == 'linux-arm64'">
     <DefineConstants>$(DefineConstants);ARM64</DefineConstants>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(BUILD_OS)' == 'Linux' AND '$(PackageRuntime)' == 'linux-riscv64'">
+    <DefineConstants>$(DefineConstants);RISCV64</DefineConstants>
+  </PropertyGroup>
 
   <!-- Set TRACE/DEBUG vars -->
   <PropertyGroup>
@@ -56,5 +59,6 @@
   <!-- Set Treat tarnings as errors -->
   <PropertyGroup>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsNotAsErrors>NU1902;SYSLIB0050;SYSLIB0051;CS0672</WarningsNotAsErrors>
   </PropertyGroup>
 </Project>
