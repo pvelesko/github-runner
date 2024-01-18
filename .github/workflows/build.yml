@@ -64,15 +64,18 @@ jobs:
       run: |
         echo "Current dotnet runtime hash result: $DOTNET_RUNTIME_HASH"
         echo "Current Externals hash result: $EXTERNALS_HASH"
+
         NeedUpdate=0
         if [ "$EXTERNALS_HASH" != "$(cat ./src/Misc/contentHash/externals/${{ matrix.runtime }})" ] ;then
           echo Hash mismatch, Update ./src/Misc/contentHash/externals/${{ matrix.runtime }} to $EXTERNALS_HASH
           NeedUpdate=1
         fi
+
         if [ "$DOTNET_RUNTIME_HASH" != "$(cat ./src/Misc/contentHash/dotnetRuntime/${{ matrix.runtime }})" ] ;then
           echo Hash mismatch, Update ./src/Misc/contentHash/dotnetRuntime/${{ matrix.runtime }} to $DOTNET_RUNTIME_HASH
           NeedUpdate=1
         fi
+
         exit $NeedUpdate
       env:
         DOTNET_RUNTIME_HASH: ${{hashFiles('**/_layout_trims/runtime/**/*')}}
