@@ -191,6 +191,6 @@ if [[ "$PACKAGERUNTIME" == "linux-arm" ]]; then
 fi
 
 if [[ "$PACKAGERUNTIME" == "linux-riscv64" ]]; then
-    acquireExternalTool "$NODE_URL/v${NODE16_VERSION}/node-v${NODE16_VERSION}-linux-arm64.tar.gz" node16 fix_nested_dir
+    acquireExternalTool "$UNOFFICIAL_NODE_URL/v${NODE16_VERSION}/node-v${NODE16_VERSION}-linux-riscv64.tar.gz" node16 fix_nested_dir
     acquireExternalTool "$UNOFFICIAL_NODE_URL/v${NODE20_VERSION}/node-v${NODE20_VERSION}-linux-riscv64.tar.gz" node20 fix_nested_dir
 fi
