@@ -2,7 +2,9 @@
   <img src="docs/res/github-graph.png">
 </p>
 
-# GitHub Actions Runner
+# GitHub Actions Runner for RISC-V
+
+v2.316.1
 
 [![Actions Status](https://github.com/actions/runner/workflows/Runner%20CI/badge.svg)](https://github.com/actions/runner/actions)
 
